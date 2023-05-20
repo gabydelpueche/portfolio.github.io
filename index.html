@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Style Sheet -->
+    <link href="portfolio.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Cinzel:wght@700&family=Notable&family=Wix+Madefor+Display:wght@500&display=swap" rel="stylesheet">
+    <!-- Chart Script -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Skill', 'Knowledge'],
+          ['HTML',     20],
+          ['CSS',      30],
+          ['Javascript',  30],
+          ['JQuery', 10],
+          ['Bootstrap',    10]
+        ]);
+
+        var options = {
+          titleTextStyle: {color:'white', fontSize:40, fontName:'Cinzel', bold:true},
+          pieHole: 0.4,
+          colors: ['#7a0045', '#7a007a', '#5e007a', '#35007a', '#16007a'],
+          backgroundColor: 'transparent',
+          scale: 3,
+          legend:{textStyle:{color: 'white', fontSize:30}, alignment:'center'},
+          pieSliceText: 'none',
+          tooltip: {text:'percentage'},
+          width: '100%'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+        <nav>
+            <div id="icon"></div>
+            <div id="navBar">
+                <div class="navItem"><a href="index.html">Home</a></div>
+                <div class="navItem"><a href="projects.html">Projects</a></div>
+                <div class="navItem"><a href="contact.html">Contact</a></div>
+            </div>
+        </nav>
+
+        <div id="mainContainer">
+            <div id="title">
+                <h1>Hi,<br> I'm Gabriella Delpueche <br> Web Developer</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium vel quod est beatae eos rem. Suscipit deleniti expedita ab nihil tempore cum amet, tenetur molestiae rerum iure vero voluptatum ex.</p>
+            </div>
+
+             <!--About Me Section -->
+            <div id="about">
+              <h2>Skills & Certifications</h2>
+              <div id="donutchart" style="width: 100%; height: 90vh;"></div>
+              <div id="cl">
+                  <div id="clItems">
+                    <div class="flexholder">
+                      <img src="IThtml.png">
+                      <p id="para1">The <b>IT Specialist HTML5 Application and Development</b> certification is a prestigious credential that validates an individual's expertise in designing and developing applications using HTML5 technology. This certification signifies a comprehensive understanding of HTML5, a powerful markup language used for structuring and presenting content on the web. IT specialists with this certification possess advanced skills in leveraging HTML5 features to create interactive and visually appealing applications that are compatible across different devices and platforms. They demonstrate proficiency in utilizing HTML5 elements, APIs, and multimedia capabilities to enhance user experience and optimize web performance. With this certification, IT specialists are equipped to tackle complex web development projects, implementing modern techniques and best practices to deliver high-quality and responsive applications that meet industry standards.</p>
+                    </div>
+                    <div class="flexholder">
+                      <p class="para2">The <b>IT Specialist JavaScript</b> certification is a recognized credential that validates an individual's expertise in programming and developing applications using JavaScript, a versatile scripting language widely used in web development. This certification demonstrates a deep understanding of JavaScript's core concepts, syntax, and functionality, enabling IT specialists to create dynamic and interactive web applications. Certified professionals possess advanced skills in manipulating the Document Object Model (DOM), handling events, implementing AJAX, and working with JSON data. They are proficient in utilizing JavaScript frameworks and libraries like React, Angular, and Node.js to streamline development processes and build scalable applications. With this certification, IT specialists are equipped to solve complex programming challenges, optimize code performance, and deliver innovative solutions that meet industry standards and user expectations.</p>
+                      <img src="ITjavascript.png">
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div> 
+
+        <footer>
+          <div class="footItem">
+            <p>gdelpu720@west-mec.org</p>
+            <p>(602)-791-3834</p>
+            <p>gabydelpueche</p>
+          </div>
+          <div class="footItem">
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam suscipit tempora quisquam facilis accusantium consequatur quam fugiat unde, iste molestiae inventore, dolorum animi, incidunt eaque sed. Perferendis odit esse accusamus?</p>
+          </div>
+        </footer>
+</body>
+</html>
+
+<!-- <3 -->
